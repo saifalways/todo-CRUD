@@ -1,0 +1,80 @@
+ /* Body Styling */
+ body {
+     background-color: #f3f4f6;
+     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+     color: #1f2937;
+     padding-top: 50px;
+     padding-bottom: 50px;
+ }
+
+ /* Main Container */
+ .container {
+     max-width: 650px;
+     background: #ffffff;
+     padding: 30px;
+     border-radius: 16px;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+ }
+
+ /* Input Group Styling */
+ .input-group {
+     margin-bottom: 18px;
+ }
+
+ .input-group-text {
+     background-color: #f9fafb;
+     border-color: #e5e7eb;
+     color: #4b5563;
+     font-weight: 600;
+     font-size: 0.95rem;
+     min-width: 90px;
+     /* Label gulok shoman size dibe */
+     justify-content: center;
+ }
+
+ .form-control {
+     border-color: #e5e7eb;
+     padding: 10px 14px;
+     font-size: 0.95rem;
+ }
+
+ .form-control:focus {
+     border-color: #3b82f6;
+     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+ }
+
+ /* Submit Button */
+ 
+
+ .btn-primary:hover {
+     background-color: #1d4ed8;
+     transform: translateY(-1px);
+ }
+
+ .btn-danger:hover {
+
+     background-color: #f00404;
+     transform: translateY(-1px);
+ }
+
+ .btn-primary:active {
+     transform: translateY(0);
+ }
+
+ /* Post Container (Generated items) */
+ .post {
+     gap: 16px;
+     margin-top: 20px;
+     border-top: 1px solid #f3f4f6;
+     padding-top: 20px;
+ }
+
+ /* Dynamic Card layout (JavaScript diye post add korle kaj korbe) */
+ .post .card {
+     border: 1px solid #e5e7eb;
+     border-radius: 12px;
+     padding: 16px;
+     background-color: #f9fafb;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+     width: 100%;
+ }

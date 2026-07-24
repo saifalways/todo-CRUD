@@ -6,7 +6,7 @@
      padding-top: 50px;
      padding-bottom: 50px;
  }
-
+    
  /* Main Container */
  .container {
      max-width: 650px;
@@ -44,7 +44,7 @@
  }
 
  /* Submit Button */
- 
+
 
  .btn-primary:hover {
      background-color: #1d4ed8;
@@ -77,4 +77,8 @@
      background-color: #f9fafb;
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
      width: 100%;
+ }
+
+ .updateBtn{
+    display: none;
  }

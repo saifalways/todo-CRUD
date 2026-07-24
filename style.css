@@ -82,3 +82,10 @@
  .updateBtn{
     display: none;
  }
+
+ .blur-card {
+  filter: blur(1px);     /* ঝাপসা করার জন্য */
+  opacity: 0.5;          /* হালকা অস্পষ্ট করার জন্য */
+  pointer-events: none;  /* ক্লিক বা কোনো ইন্টারঅ্যাকশন বন্ধ করার জন্য */
+  transition: all 0.3s ease;  /* স্মুথ অ্যানিমেশনের জন্য */
+}

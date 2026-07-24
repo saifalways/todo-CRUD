@@ -8,7 +8,7 @@ let postBtn = document.querySelector(".postBtn");
 
 let arr = [];
 
-var indexNum;
+var indexNum = null;
 
 
 postBtn.addEventListener("click", () => {
@@ -36,9 +36,9 @@ updateBtn.addEventListener("click",()=>{
       display();
       name.value = "";
       caption.value = "";
-})
+});
 
- function display () {
+ let display = ()=> {
   post.innerHTML = "";
   arr.forEach((data) => {
     post.innerHTML += `<div class="card m-2" style="width: 16.5rem;">
@@ -55,7 +55,7 @@ updateBtn.addEventListener("click",()=>{
 
   // let newname = Array.from(dltBtn);                                                       //! convert node-list to array 
 
-  [...dltBtn].map((item,index) => {                 //?   [...] is spread oparetor which returns us array from nodelist.
+  [...dltBtn].map((item,index) => {                     //?   [...] is spread oparetor which returns us array from nodelist.
     item.addEventListener("click", () => {
       console.log(index);
       arr.splice(index, 1);
@@ -66,7 +66,10 @@ updateBtn.addEventListener("click",()=>{
  
   
   let editBtn = document.querySelectorAll(".editBtn"); 
-  [...editBtn].forEach((eItem, eIndex) => {
+  
+  let allCard = document.querySelectorAll(".card");
+
+  [...editBtn].forEach((eItem, eIndex) => {                 
     eItem.addEventListener("click", () => { 
       
       indexNum = eIndex;
@@ -76,7 +79,16 @@ updateBtn.addEventListener("click",()=>{
       
       postBtn.style.display = "none";
       updateBtn.style.display = "block";   
-      dltBtn[eIndex].style.display = "none"; 
+
+
+      allCard.forEach((carD, cardIndex)=>{
+          if(cardIndex !== eIndex){
+            carD.classList.add("blur-card");
+          }
+      });
+
+      editBtn[eIndex].disabled = true;
+      dltBtn[eIndex].disabled = true;
     });
   }); 
 };
